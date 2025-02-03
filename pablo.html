@@ -1,0 +1,778 @@
+<!DOCTYPE HTML>
+<html lang="es">
+  <head>
+    <title>Pablo - Rutinas</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+    <!-- Estilos base de la plantilla Spectral -->
+    <link rel="stylesheet" href="css/main.css" />
+    <noscript><link rel="stylesheet" href="css/noscript.css" /></noscript>
+
+    <style>
+      /* Ocultamos por defecto las subsecciones de entrenamientos */
+      .training-section {
+        display: none; /* Ocultas inicialmente */
+      }
+
+      /* Pequeña animación de aparición/desaparición (opcional) */
+      .fade {
+        transition: all 0.3s ease;
+        opacity: 0;
+        height: 0;
+        overflow: hidden;
+      }
+      .fade.show {
+        opacity: 1;
+        height: auto; /* Se expande hasta su contenido */
+      }
+    </style>
+  </head>
+
+  <body class="is-preload">
+    <!-- Contenedor principal de la plantilla -->
+    <div id="page-wrapper">
+
+      <!-- Header -->
+      <header id="header">
+        <!-- Título principal -->
+        <h1 style="margin-left: 1em;">
+          <a href="pablo.html">Pablo - Rutinas</a>
+        </h1>
+        <!-- Menú interno: primero Entrenamientos, luego Progreso -->
+        <nav id="nav">
+          <ul class="actions">
+            <!-- Scroll rápido a la sección "entrenamientos" y "progreso" -->
+            <li>
+              <a href="#entrenamientos" class="button primary scrolly">
+                Entrenamientos
+              </a>
+            </li>
+            <li>
+              <a href="#progreso" class="button scrolly">
+                Progreso
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- Sección de bienvenida / introducción -->
+      <section id="intro" class="wrapper style1 fade-up">
+        <div class="inner">
+          <header>
+            <h2>Hola, Pablo</h2>
+            <p>
+              ¡Vamos a revisar tus rutinas de entrenamiento y tu progreso!
+              <br />
+              <em>Recuerda priorizar la técnica y escuchar tu cuerpo.</em>
+            </p>
+          </header>
+        </div>
+      </section>
+
+      <!-- SECCIÓN ENTRENAMIENTOS (style2) -->
+      <section
+        id="entrenamientos"
+        class="wrapper style2"
+        data-scrollex='{"enter":"top","delay":50,"initialize":false}'
+      >
+        <div class="inner">
+          <header class="major">
+            <h2>Entrenamientos</h2>
+            <p>Rutinas diarias y detalle de ejercicios</p>
+          </header>
+
+          <!-- Submenú interno para subdivisiones -->
+          <!-- Usamos data-target="..." para indicar qué sección abrir/cerrar -->
+          <ul class="actions small" style="margin-bottom: 1em;">
+            <li>
+              <a
+                href="#"
+                class="button icon solid fa-fire training-btn"
+                data-target="calentamiento"
+                >Calentamiento</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="button icon solid fa-calendar-day training-btn"
+                data-target="lunes"
+                >Lunes</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="button icon solid fa-calendar-day training-btn"
+                data-target="miercoles"
+                >Miércoles</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="button icon solid fa-calendar-day training-btn"
+                data-target="viernes"
+                >Viernes</a
+              >
+            </li>
+          </ul>
+
+          <!-- Secciones "acordeón", inicialmente ocultas -->
+          <!-- 1) Calentamiento -->
+          <section class="box training-section fade" id="calentamiento">
+            <header>
+              <h3>
+                <span class="icon solid fa-fire"></span> Calentamiento
+              </h3>
+            </header>
+            <p>
+              Antes de cada sesión, es fundamental preparar el cuerpo con un
+              calentamiento adecuado. Realiza:
+            </p>
+            <ul class="alt">
+              <li>Movilidad de hombros y caderas (2 min)</li>
+              <li>Rotaciones de cuello y muñecas (1 min)</li>
+              <li>5 minutos de cardio ligero (cinta o elíptica)</li>
+              <li>Estiramientos dinámicos de piernas y brazos</li>
+            </ul>
+            <p>Esto te ayudará a prevenir lesiones y rendir mejor.</p>
+          </section>
+
+          <!-- 2) Lunes -->
+          <section class="box training-section fade" id="lunes" style="margin-top: 2em;">
+            <header>
+              <h3>
+                <span class="icon solid fa-calendar-day"></span> Lunes
+              </h3>
+              <p>Enfocado en tren inferior y fuerza básica</p>
+            </header>
+            <div class="table-wrapper">
+              <table class="alt">
+                <thead>
+                  <tr>
+                    <th>Ejercicio</th>
+                    <th>Series</th>
+                    <th>Reps</th>
+                    <th>Peso Objetivo</th>
+                    <th>Acciones</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- Ejercicios iniciales: Abdominal y accesorios -->
+                  <tr>
+                    <td title="3 planchas frontales a aguantar">Planchas frontales (Abdominales)</td>
+                    <td>3</td>
+                    <td>Aguantar</td>
+                    <td>---</td>
+                    <td>
+                      <a href="#" class="button small icon solid fa-edit">Editar</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td title="Ejercicio de tibial con kettlebell, 10–20 repeticiones">Tibial con kettlebell</td>
+                    <td>3</td>
+                    <td>10–20</td>
+                    <td>---</td>
+                    <td>
+                      <a href="#" class="button small icon solid fa-edit">Editar</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td title="Elevaciones de gemelo en máquina, 10–20 repeticiones">Elevaciones de gemelo en máquina</td>
+                    <td>3</td>
+                    <td>10–20</td>
+                    <td>---</td>
+                    <td>
+                      <a href="#" class="button small icon solid fa-edit">Editar</a>
+                    </td>
+                  </tr>
+                  <!-- Rutina principal (cada ejercicio con 3 series en lugar de 2) -->
+                  <tr>
+                    <td title="Cuerpo pegado a la pared, sin despegar el glúteo.">Curl de bíceps con barra Z de competición</td>
+                    <td>3</td>
+                    <td>15–8</td>
+                    <td>---</td>
+                    <td>
+                      <a href="#" class="button small icon solid fa-edit">Editar</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td title="Cubrimos el trabajo con el húmero hiperextendido. Si las multiestaciones están más separadas, hacerlo de forma unilateral manteniendo la alineación.">Curl bayesian</td>
+                    <td>3</td>
+                    <td>15–10</td>
+                    <td>---</td>
+                    <td>
+                      <a href="#" class="button small icon solid fa-edit">Editar</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td title="Movimiento controlado y estiramiento consciente en el punto de máximo estiramiento.">Aductor máquina</td>
+                    <td>3</td>
+                    <td>20–10</td>
+                    <td>---</td>
+                    <td>
+                      <a href="#" class="button small icon solid fa-edit">Editar</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td title="3 seg. en fase excéntrica, parada manteniendo tensión, y concéntrica explosiva.">Sentadilla con tempo y parada</td>
+                    <td>3</td>
+                    <td>10–5</td>
+                    <td>---</td>
+                    <td>
+                      <a href="#" class="button small icon solid fa-edit">Editar</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td title="Trabaja el cuádriceps en acortamiento; acentúa la dorsiflexión y tracciona las asas hacia arriba y atrás.">Extensión de cuádriceps</td>
+                    <td>3</td>
+                    <td>20–10</td>
+                    <td>---</td>
+                    <td>
+                      <a href="#" class="button small icon solid fa-edit">Editar</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Curl femoral tumbado</td>
+                    <td>3</td>
+                    <td>15–8</td>
+                    <td>---</td>
+                    <td>
+                      <a href="#" class="button small icon solid fa-edit">Editar</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td title="Carga contralateral y sin apoyo, para fortalecer el equilibrio y la estabilidad.">Sentadilla búlgara</td>
+                    <td>3</td>
+                    <td>15–8</td>
+                    <td>---</td>
+                    <td>
+                      <a href="#" class="button small icon solid fa-edit">Editar</a>
+                    </td>
+                  </tr>
+                  <!-- Ejercicios finales -->
+                  <tr>
+                    <td>Curl de cuello</td>
+                    <td>2</td>
+                    <td>-</td>
+                    <td>---</td>
+                    <td>
+                      <a href="#" class="button small icon solid fa-edit">Editar</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td title="Suspensiones: aguanta el máximo tiempo posible.">Suspensiones (aguantar el máximo)</td>
+                    <td>3</td>
+                    <td>Máximo</td>
+                    <td>---</td>
+                    <td>
+                      <a href="#" class="button small icon solid fa-edit">Editar</a>
+                    </td>
+                  </tr>
+                </tbody>                
+              </table>
+            </div>
+          </section>
+
+          <!-- 3) Miércoles -->
+          <section
+            class="box training-section fade"
+            id="miercoles"
+            style="margin-top: 2em;"
+          >
+            <header>
+              <h3>
+                <span class="icon solid fa-calendar-day"></span> Miércoles
+              </h3>
+              <p>Principal enfoque en tren posterior</p>
+            </header>
+            <div class="table-wrapper">
+              <table class="alt">
+                <thead>
+                  <tr>
+                    <th>Ejercicio</th>
+                    <th>Series</th>
+                    <th>Reps</th>
+                    <th>Peso Objetivo</th>
+                    <th>Acciones</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td title="Parada de 3 seg. en fase excéntrica; mantén tensión total durante la pausa.">Press banca plano convencional</td>
+                    <td>3</td>
+                    <td>10–5</td>
+                    <td>---</td>
+                    <td>
+                      <a href="#" class="button small icon solid fa-edit">Editar</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td title="Máximo recorrido; si es posible, realiza el ejercicio con mancuernas.">Press banca inclinado (20º aprox)</td>
+                    <td>3</td>
+                    <td>12–8</td>
+                    <td>---</td>
+                    <td>
+                      <a href="#" class="button small icon solid fa-edit">Editar</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td title="Movimiento controlado, acentúa tanto el estiramiento como la contracción, acercando los codos.">Aperturas con soporte (sentado y con respaldo)</td>
+                    <td>3</td>
+                    <td>15–8</td>
+                    <td>---</td>
+                    <td>
+                      <a href="#" class="button small icon solid fa-edit">Editar</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td title="Intencionalidad de alejar el peso hacia los lados, no de subirlo.">Elevaciones laterales en polea baja</td>
+                    <td>3</td>
+                    <td>15–10</td>
+                    <td>---</td>
+                    <td>
+                      <a href="#" class="button small icon solid fa-edit">Editar</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>PRJ PULLOVER</td>
+                    <td>3</td>
+                    <td>15–8</td>
+                    <td>---</td>
+                    <td>
+                      <a href="#" class="button small icon solid fa-edit">Editar</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td title="Realiza el ejercicio con el hombro en posición de flexión completa.">Extensión katana en polea</td>
+                    <td>3</td>
+                    <td>15–8</td>
+                    <td>---</td>
+                    <td>
+                      <a href="#" class="button small icon solid fa-edit">Editar</a>
+                    </td>
+                  </tr>
+                  <!-- Ejercicios finales -->
+                  <tr>
+                    <td>Paseo de granjero</td>
+                    <td>2</td>
+                    <td>-</td>
+                    <td>---</td>
+                    <td>
+                      <a href="#" class="button small icon solid fa-edit">Editar</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Isométrico de cuello</td>
+                    <td>2</td>
+                    <td>-</td>
+                    <td>---</td>
+                    <td>
+                      <a href="#" class="button small icon solid fa-edit">Editar</a>
+                    </td>
+                  </tr>
+                </tbody>                
+              </table>
+            </div>
+          </section>
+
+          <!-- 4) Viernes -->
+          <section
+            class="box training-section fade"
+            id="viernes"
+            style="margin-top: 2em;"
+          >
+            <header>
+              <h3>
+                <span class="icon solid fa-calendar-day"></span> Viernes
+              </h3>
+              <p>Sesión variada para tren superior e inferior</p>
+            </header>
+            <div class="table-wrapper">
+              <table class="alt">
+                <thead>
+                  <tr>
+                    <th>Ejercicio</th>
+                    <th>Series</th>
+                    <th>Reps</th>
+                    <th>Peso Objetivo</th>
+                    <th>Acciones</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- Ejercicios iniciales: Abdominal y accesorios -->
+                  <tr>
+                    <td title="3 series de crunch abdominal en máquina">Crunch abdominal en máquina</td>
+                    <td>3</td>
+                    <td>-</td>
+                    <td>---</td>
+                    <td>
+                      <a href="#" class="button small icon solid fa-edit">Editar</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td title="Ejercicio de tibial con kettlebell, 10–20 repeticiones">Tibial con kettlebell</td>
+                    <td>3</td>
+                    <td>10–20</td>
+                    <td>---</td>
+                    <td>
+                      <a href="#" class="button small icon solid fa-edit">Editar</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td title="Elevaciones de gemelo en máquina, 10–20 repeticiones">Elevaciones de gemelo en máquina</td>
+                    <td>3</td>
+                    <td>10–20</td>
+                    <td>---</td>
+                    <td>
+                      <a href="#" class="button small icon solid fa-edit">Editar</a>
+                    </td>
+                  </tr>
+                  <!-- Rutina principal (cada ejercicio con 3 series) -->
+                  <tr>
+                    <td title="Agarre supino; también se puede realizar con barra Z vigilando la técnica.">Curl en banco Scott (unilateral, mancuerna)</td>
+                    <td>3</td>
+                    <td>15–8</td>
+                    <td>---</td>
+                    <td>
+                      <a href="#" class="button small icon solid fa-edit">Editar</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td title="Enfocado en el trabajo del braquial.">Curl martillo unilateral</td>
+                    <td>3</td>
+                    <td>15–8</td>
+                    <td>---</td>
+                    <td>
+                      <a href="#" class="button small icon solid fa-edit">Editar</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Aductor en máquina</td>
+                    <td>3</td>
+                    <td>20–10</td>
+                    <td>---</td>
+                    <td>
+                      <a href="#" class="button small icon solid fa-edit">Editar</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td title="Ejecuta la bisagra de cadera con el Peso muerto convencional.">Peso muerto convencional</td>
+                    <td>3</td>
+                    <td>9–5</td>
+                    <td>---</td>
+                    <td>
+                      <a href="#" class="button small icon solid fa-edit">Editar</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td title="Utiliza el agarre que te resulte más cómodo.">Dominadas</td>
+                    <td>3</td>
+                    <td>9–3</td>
+                    <td>---</td>
+                    <td>
+                      <a href="#" class="button small icon solid fa-edit">Editar</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td title="Agarre neutro, semisupino o supino; ancho alineado con el dorsal.">Remo vertical bilateral</td>
+                    <td>3</td>
+                    <td>12–8</td>
+                    <td>---</td>
+                    <td>
+                      <a href="#" class="button small icon solid fa-edit">Editar</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td title="Realiza una máxima protracción y retracción.">Jalón para espalda alta</td>
+                    <td>3</td>
+                    <td>15–8</td>
+                    <td>---</td>
+                    <td>
+                      <a href="#" class="button small icon solid fa-edit">Editar</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td title="Enfocado en los deltoides posteriores; mantén una técnica adecuada.">Pájaros</td>
+                    <td>3</td>
+                    <td>20–10</td>
+                    <td>---</td>
+                    <td>
+                      <a href="#" class="button small icon solid fa-edit">Editar</a>
+                    </td>
+                  </tr>
+                  <!-- Ejercicios finales -->
+                  <tr>
+                    <td>Curl de cuello</td>
+                    <td>2</td>
+                    <td>-</td>
+                    <td>---</td>
+                    <td>
+                      <a href="#" class="button small icon solid fa-edit">Editar</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td title="Suspensiones: aguanta el máximo tiempo posible.">Suspensiones (aguantar el máximo)</td>
+                    <td>3</td>
+                    <td>Máximo</td>
+                    <td>---</td>
+                    <td>
+                      <a href="#" class="button small icon solid fa-edit">Editar</a>
+                    </td>
+                  </tr>
+                </tbody>                
+              </table>
+            </div>
+          </section>
+
+          <!-- Botón para agregar un nuevo entrenamiento (global) -->
+          <ul class="actions" style="margin-top: 1em;">
+            <li><a href="#" class="button primary small">Agregar Entrenamiento</a></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- NUEVA SECCIÓN PROGRESO (style3) -->
+      <section
+        id="progreso"
+        class="wrapper style3"
+        data-scrollex='{"enter":"top","delay":50}'
+      >
+        <div class="inner">
+          <header class="major">
+            <h2>Progreso</h2>
+            <p>Monitorea tu evolución y estadísticas</p>
+          </header>
+
+          <!-- BOTONES PRINCIPALES DE LA SECCION -->
+          <ul class="actions" style="margin-bottom: 1em;">
+            <!-- 1) Botón para seleccionar/comparar un ejercicio -->
+            <li>
+              <a href="#" class="button icon solid fa-sliders-h" id="btnComparar"
+                >Seleccionar/Comparar Ejercicio</a
+              >
+            </li>
+            <!-- 2) Botón para ver "contador de datos curiosos" -->
+            <li>
+              <a href="#" class="button icon solid fa-dumbbell" id="btnContador"
+                >Estadísticas Globales</a
+              >
+            </li>
+            <!-- 3) Botón de "tercer panel" (ej. Ranking personal) -->
+            <li>
+              <a href="#" class="button icon solid fa-trophy" id="btnRanking"
+                >Ranking Personal</a
+              >
+            </li>
+          </ul>
+
+          <!-- 1) SUBSECCION: Comparar Ejercicios -->
+          <section class="box fade" id="progreso-comparar" style="display: none;">
+            <header>
+              <h3>Comparar/Seleccionar Ejercicio</h3>
+              <p>Elige un ejercicio para ver su tabla y su gráfica.</p>
+            </header>
+            <!-- DESPLEGABLE DE EJERCICIOS (SIMULADO) -->
+            <div style="margin-bottom: 1em;">
+              <label for="selectEjercicio"><strong>Ejercicio:</strong></label>
+              <select name="selectEjercicio" id="selectEjercicio">
+                <option value="">-- Selecciona --</option>
+                <option value="sentadilla">Sentadilla</option>
+                <option value="press-banca">Press Banca</option>
+                <option value="peso-muerto">Peso Muerto</option>
+                <option value="press-militar">Press Militar</option>
+                <!-- ... etc ... -->
+              </select>
+            </div>
+
+            <!-- TABLA: HISTORIAL EJERCICIO -->
+            <div class="table-wrapper" id="tablaHistorial" style="display: none;">
+              <table class="alt">
+                <thead>
+                  <tr>
+                    <th>Fecha</th>
+                    <th>Peso (kg)</th>
+                    <th>Reps</th>
+                    <th>RM Estim.</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- Se llenará dinámicamente cuando se seleccione un ejercicio -->
+                  <tr>
+                    <td>--</td>
+                    <td>--</td>
+                    <td>--</td>
+                    <td>--</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- GRAFICA: DÍA VS PESO (SIMULADO) -->
+            <section class="box alt" style="margin-top: 1em; display: none;" id="graficaBox">
+              <h4>Gráfica de Peso vs Día</h4>
+              <span class="image fit">
+                <!-- En producción, se usaría un <canvas> de Chart.js -->
+                <img src="images/grafica-placeholder.jpg" alt="Placeholder Gráfica" />
+              </span>
+              <p style="font-size: 0.9em;">
+                Pasa el ratón por encima de cada punto para ver repeticiones.
+              </p>
+            </section>
+          </section>
+
+          <!-- 2) SUBSECCION: Contador / Estadísticas Globales -->
+          <section class="box fade" id="progreso-contador" style="display: none;">
+            <header>
+              <h3>Estadísticas Globales</h3>
+              <p>Resumen general de tu actividad</p>
+            </header>
+            <div class="row gtr-50">
+              <!-- TARJETA 1: DIAS ENTRENADOS -->
+              <div class="col-4 col-12-small">
+                <section class="box">
+                  <h4><span class="icon solid fa-calendar-day"></span> Días entrenados</h4>
+                  <p id="contadorDias" style="font-size: 1.5em; font-weight: bold;">0</p>
+                </section>
+              </div>
+              <!-- TARJETA 2: REPETICIONES TOTALES -->
+              <div class="col-4 col-12-small">
+                <section class="box">
+                  <h4><span class="icon solid fa-sync"></span> Repeticiones totales</h4>
+                  <p id="contadorReps" style="font-size: 1.5em; font-weight: bold;">0</p>
+                </section>
+              </div>
+              <!-- TARJETA 3: KILOS MOVIDOS -->
+              <div class="col-4 col-12-small">
+                <section class="box">
+                  <h4><span class="icon solid fa-dumbbell"></span> Kilos movidos</h4>
+                  <p id="contadorKilos" style="font-size: 1.5em; font-weight: bold;">0</p>
+                </section>
+              </div>
+            </div>
+          </section>
+
+          <!-- 3) SUBSECCION: Tercer Botón (Ranking Personal) -->
+          <section class="box fade" id="progreso-ranking" style="display: none;">
+            <header>
+              <h3>Ranking Personal</h3>
+              <p>Tus mejores marcas en cada ejercicio</p>
+            </header>
+            <div class="table-wrapper">
+              <table class="alt">
+                <thead>
+                  <tr>
+                    <th>Ejercicio</th>
+                    <th>Mejor Peso (kg)</th>
+                    <th>Reps Logradas</th>
+                    <th>Fecha</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- Rellenar con top 5 o top 3 de cada ejercicio -->
+                  <tr>
+                    <td>Sentadilla</td>
+                    <td>120</td>
+                    <td>5</td>
+                    <td>15/03/2025</td>
+                  </tr>
+                  <tr>
+                    <td>Press Banca</td>
+                    <td>80</td>
+                    <td>7</td>
+                    <td>21/04/2025</td>
+                  </tr>
+                  <!-- ... etc ... -->
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer id="footer">
+        <ul class="actions">
+          <!-- Botón para regresar a la selección de usuario -->
+          <li>
+            <a href="quien-eres.html" class="button small icon solid fa-arrow-left">
+              Volver a Selección de Usuario
+            </a>
+          </li>
+        </ul>
+        <ul class="icons">
+          <!-- Íconos sociales (opcional) -->
+          <li>
+            <a href="#" class="icon brands fa-twitter"><span class="label"
+              >Twitter</span
+            ></a>
+          </li>
+          <li>
+            <a href="#" class="icon brands fa-facebook-f"><span class="label"
+              >Facebook</span
+            ></a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <!-- Scripts base de Spectral -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.scrollex.min.js"></script>
+    <script src="js/jquery.scrolly.min.js"></script>
+    <script src="js/browser.min.js"></script>
+    <script src="js/breakpoints.min.js"></script>
+    <script src="js/util.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- SCRIPT EXTRA: Ajustar velocidad de scrolly y acordeón subsecciones (Entrenamientos) -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        /* 1. Ajustar velocidad de scrolly, por ejemplo a 600 ms en lugar de 1000/1500 */
+        if (typeof jQuery !== "undefined" && typeof jQuery.fn.scrolly === "function") {
+          jQuery(".scrolly").scrolly({
+            speed: 600, // más rápido que el default
+          });
+        }
+
+        /* 2. Lógica de acordeón para las subsecciones de entrenamiento */
+        const buttons = document.querySelectorAll(".training-btn");
+        const allSections = document.querySelectorAll(".training-section");
+
+        function showSection(sectionId) {
+          allSections.forEach((sec) => {
+            if (sec.id === sectionId) {
+              // Alternar si queremos "abrir/cerrar" al hacer clic repetido
+              if (sec.style.display === "none" || sec.style.display === "") {
+                sec.style.display = "block";
+                sec.classList.add("show");
+              } else {
+                sec.style.display = "none";
+                sec.classList.remove("show");
+              }
+            } else {
+              // Cerrar las demás
+              sec.style.display = "none";
+              sec.classList.remove("show");
+            }
+          });
+        }
+
+        buttons.forEach((btn) => {
+          btn.addEventListener("click", (e) => {
+            e.preventDefault();
+            const targetId = btn.getAttribute("data-target");
+            showSection(targetId);
+          });
+        });
+      });
+    </script>
+
+    <!-- (Opcional) Script para manejar la lógica interna de la nueva sección Progreso 
+         (ej: desplegar tabla al elegir ejercicio, contadores, ranking, etc.)
+         De momento no implementado, pero listo para añadir. -->
+  </body>
+</html>

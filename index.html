@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+<html lang="es">
+  <head>
+    <title>Training Assistant - Inicio</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+
+    <!-- (Opcional) Font Awesome si quieres iconos -->
+    <!-- <link rel="stylesheet" href="css/fontawesome-all.min.css" /> -->
+
+    <!-- Hoja de estilos principal -->
+    <link rel="stylesheet" href="css/main.css" />
+    <noscript><link rel="stylesheet" href="css/noscript.css" /></noscript>
+  </head>
+
+  <!-- Eliminamos la clase 'alt' y la navegación para no mostrar el menú hamburguesa -->
+  <body class="landing is-preload">
+    <!-- Page Wrapper -->
+    <div id="page-wrapper">
+      <!-- Header "mínimo" sin menú -->
+      <header id="header">
+        <h1 style="margin-left: 1em;">
+          <a href="index.html">Training Assistant</a>
+        </h1>
+      </header>
+
+      <!-- Banner (pantalla de inicio) -->
+      <section id="banner">
+        <div class="inner">
+          <h2>TRAINING ASSISTANT</h2>
+          <p>¡Supera tus límites cada día!</p>
+          <ul class="actions special">
+            <li><a href="#" id="btnAcceder" class="button primary">Acceder</a></li>
+          </ul>
+        </div>
+        <!-- Eliminado el link con la flecha "Learn More" -->
+      </section>
+
+      <!-- Footer (opcional) -->
+      <footer id="footer">
+        <ul class="icons">
+          <!-- Si no necesitas íconos, puedes eliminar esta sección -->
+          <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+          <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+          <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+          <li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
+          <li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+        </ul>
+        <ul class="copyright">
+          <li>&copy; Mi Proyecto Gym</li>
+          <li>Plantilla base: <a href="https://html5up.net">HTML5 UP</a></li>
+        </ul>
+      </footer>
+    </div>
+    
+    <!-- Firebase -->
+    <script type="module">
+      // Importar las funciones necesarias de Firebase
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-analytics.js";
+
+      // Configuración de Firebase
+      const firebaseConfig = {
+          apiKey: "AIzaSyAq0oyu-jSYSuqEqjlaviS5_Q7e2R46yzg",
+          authDomain: "gymtracker-e3c69.firebaseapp.com",
+          projectId: "gymtracker-e3c69",
+          storageBucket: "gymtracker-e3c69.firebasestorage.app",
+          messagingSenderId: "116565501003",
+          appId: "1:116565501003:web:2d171575397d2a7556d9ce",
+          measurementId: "G-CQ9ZMTZQDS"
+      };
+      
+
+      // Inicializar Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+
+      console.log("Firebase inicializado correctamente");
+    </script>
+
+    <!-- Scripts principales -->
+    <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore-compat.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.scrollex.min.js"></script>
+    <script src="js/jquery.scrolly.min.js"></script>
+    <script src="js/browser.min.js"></script>
+    <script src="js/breakpoints.min.js"></script>
+    <script src="js/util.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- Script para solicitar contraseña y redirigir -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const boton = document.getElementById("btnAcceder");
+        boton.addEventListener("click", function (event) {
+          event.preventDefault();
+          const pass = prompt("Introduzca la contraseña:");
+          if (pass === "1234") {
+            // Redirigir a la pantalla principal (quien-eres)
+            window.location.href = "quien-eres.html";
+          } else {
+            alert("Contraseña incorrecta");
+          }
+        });
+      });
+    </script>
+    
+  </body>
+</html>

@@ -1,0 +1,276 @@
+<!DOCTYPE HTML>
+<html lang="es">
+  <head>
+    <title>¿Quién eres? - Training Assistant</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+    <!-- Estilos base de Spectral -->
+    <link rel="stylesheet" href="css/main.css" />
+    <noscript><link rel="stylesheet" href="css/noscript.css" /></noscript>
+    
+    <!-- Fuentes y optimizaciones CSS adicionales -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link 
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" 
+      rel="stylesheet"
+    >
+
+    <style>
+      /* ---------- Reset básico ---------- */
+      *, *::before, *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: 'Roboto', sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background-color: #f8f8f8;
+        overflow-x: hidden;
+      }
+
+      /* ---------- Encabezado principal (barra superior) ---------- */
+      header#header {
+        background-color: #2f3d4a;      /* Fondo oscuro superior */
+        padding: 1em 2em;              /* Espaciado */
+        border-bottom: 1px solid #fff; /* Línea blanca inferior */
+      }
+      header#header h1 a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.6em;
+      }
+      header#header a:hover {
+        text-decoration: underline;
+      }
+
+      /* ---------- Sección “Selecciona tu perfil” (gran bloque oscuro) ---------- */
+      article#main > header {
+        background: linear-gradient(180deg, #3a3a3a 0%, #1f1f1f 100%);
+        text-align: center;
+        padding: 4em 1em;
+        color: #fff;
+      }
+      article#main > header h2 {
+        font-size: 2.2em;
+        letter-spacing: 0.03em;
+        margin-bottom: 0.3em;
+      }
+      article#main > header p {
+        font-size: 1.1em;
+        opacity: 0.85;
+      }
+
+      /* ---------- Sección wrapper y tarjetas (segundo código) ---------- */
+      section.wrapper.style1 {
+        padding: 2em 1em;
+      }
+      .row.aln-center {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 2em;
+      }
+      .col-6,
+      .col-12-small {
+        flex: 1 1 300px;
+      }
+      .box {
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        padding: 1em;
+        text-align: center;
+        cursor: pointer;
+      }
+      .box:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+      }
+      .box h3 {
+        margin-top: 1em;
+        font-size: 1.5em;
+        color: #333;
+      }
+      .box p {
+        margin: 0.5em 0;
+        font-size: 1em;
+        color: #555;
+      }
+      .box footer {
+        margin-top: 1em;
+      }
+
+      /* ---------- Botones ---------- */
+      .button {
+        display: inline-block;
+        padding: 0.6em 1.2em;
+        background-color: #4CAF50;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 4px;
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      }
+      .button.small {
+        font-size: 0.9em;
+      }
+      .button.primary:hover,
+      .button.primary:focus {
+        background-color: #43A047;
+        box-shadow: 0 0 0 3px rgba(67,160,71,0.4);
+      }
+
+      /* ---------- Imágenes (redondas con hover) ---------- */
+      .image.fit img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        border-radius: 50%;
+        transition: transform 0.3s ease;
+      }
+      .image.fit img:hover {
+        transform: scale(1.05);
+      }
+
+      /* ---------- Footer ---------- */
+      footer#footer {
+        background: #333;
+        color: #fff;
+        padding: 1em;
+        text-align: center;
+      }
+      footer#footer ul {
+        list-style: none;
+        margin: 0.5em 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        gap: 1em;
+      }
+      footer#footer a {
+        color: #fff;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+      footer#footer a:hover {
+        color: #81C784;
+      }
+
+      /* ---------- Transiciones y accesibilidad ---------- */
+      html {
+        scroll-behavior: smooth;
+      }
+      a:focus {
+        outline: 2px dashed #81C784;
+        outline-offset: 2px;
+      }
+
+      /* ---------- Responsive ---------- */
+      @media screen and (max-width: 768px) {
+        .row.aln-center {
+          flex-direction: column;
+        }
+        header#header {
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="is-preload">
+    <!-- Page Wrapper -->
+    <div id="page-wrapper">
+      <!-- Header -->
+      <header id="header">
+        <h1>
+          <a href="quien-eres.html">
+            <span class="icon solid fa-dumbbell"></span> ¿Quién eres?
+          </a>
+        </h1>
+      </header>
+
+      <!-- Sección principal -->
+      <article id="main">
+        <!-- Bloque oscuro con texto central -->
+        <header>
+          <h2>Selecciona tu perfil</h2>
+          <p>Cada persona, un camino de progreso</p>
+        </header>
+
+        <!-- Contenedor wrapper de los perfiles -->
+        <section class="wrapper style1">
+          <div class="inner">
+            <div class="row aln-center">
+              <!-- Tarjeta de Julio -->
+              <div class="col-6 col-12-small">
+                <section class="box" title="¡Hola, soy Julio!">
+                  <span class="image fit">
+                    <img 
+                      src="images/julio.jpg" 
+                      alt="Foto de Julio" 
+                      width="200" 
+                      height="200" 
+                      loading="lazy" 
+                    />
+                  </span>
+                  <h3>Julio</h3>
+                  <p><em>Objetivo: Fuerza y resistencia</em></p>
+                  <footer>
+                    <a href="julio.html" class="button small primary">Soy Julio</a>
+                  </footer>
+                </section>
+              </div>
+
+              <!-- Tarjeta de Pablo -->
+              <div class="col-6 col-12-small">
+                <section class="box" title="¡Vamos Pablo, a por todas!">
+                  <span class="image fit">
+                    <img 
+                      src="images/pablo.jpg" 
+                      alt="Foto de Pablo" 
+                      width="200" 
+                      height="200" 
+                      loading="lazy"
+                    />
+                  </span>
+                  <h3>Pablo</h3>
+                  <p><em>Objetivo: Hipertrofia y técnica</em></p>
+                  <footer>
+                    <a href="pablo.html" class="button small primary">Soy Pablo</a>
+                  </footer>
+                </section>
+              </div>
+            </div>
+          </div>
+        </section>
+      </article>
+
+      <!-- Footer con link de volver al menú principal -->
+      <footer id="footer">
+        <ul class="actions">
+          <li>
+            <a href="quien-eres.html" class="button small icon solid fa-arrow-left">
+              Volver
+            </a>
+          </li>
+        </ul>
+        <ul class="icons">
+          <li><a href="#" class="icon brands fa-twitter">Twitter</a></li>
+          <li><a href="#" class="icon brands fa-facebook-f">Facebook</a></li>
+        </ul>
+      </footer>
+    </div>
+
+    <!-- Scripts base de Spectral -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.scrollex.min.js"></script>
+    <script src="js/jquery.scrolly.min.js"></script>
+    <script src="js/browser.min.js"></script>
+    <script src="js/breakpoints.min.js"></script>
+    <script src="js/util.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
